@@ -1,0 +1,13 @@
+name: Cron Confirm Test
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show time
+        run: echo "🕒 Cron working: $(date)"
